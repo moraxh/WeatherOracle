@@ -1,0 +1,25 @@
+{
+  "name": "weather_oracle",
+  "version": "1.0.0",
+  "description": "WeatherOracle is a state-of-the-art application built using Node.js, Docker, and Git Flow to fetch and process historical weather data for the entire state of Guanajuato. Utilizing the OpenWeather API, it retrieves weather data from the past 5 years and employs powerful predictive models like XGBoost to provide accurate weather forecasts.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index.js",
+    "build": "docker-compose up --build",
+    "up": "docker-compose up",
+    "down": "docker-compose down"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/moraxh/WeatherOracle.git"
+  },
+  "author": "Jorge Mora",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/moraxh/WeatherOracle/issues"
+  },
+  "homepage": "https://github.com/moraxh/WeatherOracle#readme",
+  "devDependencies": {
+    "nodemon": "^3.1.7"
+  }
+}
