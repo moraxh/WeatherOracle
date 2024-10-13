@@ -5,7 +5,7 @@
   "type": "module",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon index.js",
+    "dev": "nodemon -L index.js",
     "build": "docker-compose up --build",
     "up": "docker-compose up",
     "down": "docker-compose down"
@@ -20,7 +20,14 @@
     "url": "https://github.com/moraxh/WeatherOracle/issues"
   },
   "homepage": "https://github.com/moraxh/WeatherOracle#readme",
+  "dependencies": {
+    "mongodb": "^6.9.0"
+  },
   "devDependencies": {
-    "nodemon": "^3.1.7"
+    "nodemon": "^3.1.7",
+    "standard": "^17.1.2"
+  },
+  "eslintConfig": {
+    "extends": "./node_modules/standard/eslintrc.json"
   }
 }
