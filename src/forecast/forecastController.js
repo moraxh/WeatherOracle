@@ -50,16 +50,15 @@ export class forecastController {
           return
         }
 
-        const cities = await response.json()
-
-        cities.forEach(async (city) => {
+        const data = await response.json()
+        data.forEach(async (city, j) => {
           const data = []
           const hourly = city.hourly
 
           hourly.time.forEach((timestamp, i) => {
             data.push({
-              city_id: city._id,
-              city_name: city.name,
+              city_id: cities[j]._id,
+              city_name: cities[j].name,
               timestamp,
               temperature: hourly.temperature_2m[i],
               pressure: hourly.surface_pressure[i]
